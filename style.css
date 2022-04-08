@@ -26,29 +26,33 @@ html{
     padding: 1em;
     border-radius: 15px;
     background-color: var(--card-bg);
-    box-shadow: 0 25px 5px 15px rgba(0, 0, 0, 0.15),  0 0 0px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 5px 15px rgba(0, 0, 0, 0.1);
     
 }
-img{
+.images .main-image{
+    background-image: url(./images/image-equilibrium.jpg);
+    background-size: cover;
     width: 100%;
     aspect-ratio: 1;
     border-radius: 15px;
     position: relative;
     cursor: pointer;
 }
-img::before{
+.images .icon-view{
     position:absolute;
-    content: url(./images/icon-view.svg);
+    background-size: contain;
     top: 50%;
     left: 50%;
+    margin-top: 20px;
+    margin-left: -25px;
     width: auto;
     height: auto;
     opacity: 0;
 }
 
-img:hover::before{
+.main-image:hover ~ .icon-view{
     opacity: 1;
-    }
+}
 h3{
     width: fit-content;
     color: #fff;
