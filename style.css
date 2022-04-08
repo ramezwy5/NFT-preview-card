@@ -20,7 +20,7 @@ html{
     align-items: center;
 }
 .card{
-    margin: 25% auto;
+    margin: 50% auto;
     width: 350px;
     aspect-ratio: 0.58;
     padding: 1em;
@@ -33,10 +33,27 @@ img{
     width: 100%;
     aspect-ratio: 1;
     border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+img::before{
+    position:absolute;
+    content: "";
+    background-image: url(./images/icon-view.svg);
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    opacity: 0;
 }
 h3{
+    width: fit-content;
     color: #fff;
     padding: 1em 0;
+    cursor: pointer;
+}
+h3:hover{
+    color: var(--cyan);
 }
 .details{
     display: flex;
@@ -59,6 +76,10 @@ h3{
 }
 .owner span{
     color: #fff;
+    cursor: pointer;
+}
+.owner span:hover{
+    color: var(--cyan);
 }
 .details .price::before{
     position: absolute;
@@ -89,4 +110,7 @@ h3{
     aspect-ratio: 1;
     border: 1px solid #fff;
     border-radius: 50%;
+}
+img:hover::before{
+opacity: 1;
 }
