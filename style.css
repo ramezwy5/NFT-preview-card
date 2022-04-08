@@ -38,14 +38,17 @@ img{
 }
 img::before{
     position:absolute;
-    content: "";
-    background-image: url(./images/icon-view.svg);
+    content: url(./images/icon-view.svg);
     top: 50%;
     left: 50%;
     width: auto;
     height: auto;
     opacity: 0;
 }
+
+img:hover::before{
+    opacity: 1;
+    }
 h3{
     width: fit-content;
     color: #fff;
@@ -110,7 +113,4 @@ h3:hover{
     aspect-ratio: 1;
     border: 1px solid #fff;
     border-radius: 50%;
-}
-img:hover::before{
-opacity: 1;
 }
